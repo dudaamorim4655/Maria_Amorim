@@ -1,0 +1,230 @@
+
+
+/* CONFIGURAÇÕES GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f4f6;
+    color: #303b42;
+    line-height: 1.6;
+}
+
+/* CABEÇALHO */
+header {
+    background-color: #244653;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 30px;
+    margin-bottom: 18px;
+    letter-spacing: 1px;
+}
+
+/* FLEXBOX - MENU */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: #527987;
+    transform: translateY(-3px);
+}
+
+/* CONTEÚDO */
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 35px auto;
+}
+
+section {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+    transition: 0.3s;
+}
+
+section h2 {
+    color: #244653;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #dce7eb;
+    padding-bottom: 10px;
+}
+
+/* INÍCIO */
+#inicio {
+    text-align: center;
+    padding: 50px 25px;
+    background-color: #e0ebef;
+}
+
+#inicio h2 {
+    border: none;
+    font-size: 27px;
+}
+
+/* GRID - COMÉRCIOS */
+.lista {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+    margin-top: 25px;
+}
+
+article {
+    background-color: #f5f8f9;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #dce5e9;
+    border-left: 5px solid #527987;
+    transition: 0.3s;
+}
+
+/* INTERAÇÃO DOS CARTÕES */
+article:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 18px rgba(36,70,83,0.15);
+    background-color: #eaf2f5;
+}
+
+article h3 {
+    color: #244653;
+    margin-bottom: 10px;
+}
+
+/* FORMULÁRIO */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+label {
+    font-weight: bold;
+    color: #244653;
+}
+
+input, select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #cbd6dc;
+    border-radius: 7px;
+    font-size: 15px;
+    background-color: #fafcfd;
+    transition: 0.3s;
+}
+
+/* INTERAÇÃO DOS CAMPOS */
+input:focus, select:focus {
+    outline: none;
+    border-color: #527987;
+    box-shadow: 0 0 5px rgba(82,121,135,0.3);
+}
+
+/* BOTÃO */
+button {
+    background-color: #244653;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 7px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #527987;
+    transform: scale(1.02);
+}
+
+/* RODAPÉ */
+footer {
+    background-color: #244653;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+}
+
+/* TABLETS */
+@media (min-width: 601px) and (max-width: 900px) {
+    main {
+        width: 95%;
+    }
+
+    .lista {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* CELULARES */
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 23px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    main {
+        width: 94%;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    #inicio {
+        padding: 35px 15px;
+    }
+
+    #inicio h2 {
+        font-size: 22px;
+    }
+
+    .lista {
+        grid-template-columns: 1fr;
+    }
+
+    article {
+        padding: 20px;
+    }
+}
+article img {
+    width: 85px;
+    height: 85px;
+    object-fit: cover;
+    border-radius: 8px;
+}
